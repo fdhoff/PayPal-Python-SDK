@@ -1,6 +1,6 @@
-from paypalrestsdk.resource import List, Find, Create, Delete, Update, Replace, Resource, Post
-from paypalrestsdk.api import default as default_api
-import paypalrestsdk.util as util
+from paypalrestsdkold.resource import List, Find, Create, Delete, Update, Replace, Resource, Post
+from paypalrestsdkold.api import default as default_api
+import paypalrestsdkold.util as util
 import binascii
 from base64 import b64decode
 import requests
@@ -40,7 +40,7 @@ class WebhookEvent(Find, List, Post):
 
     def get_resource(self):
         """Get the resource sent via the webhook event, e.g. Authorization, conveniently
-         wrapped in the corresponding paypalrestsdk class
+         wrapped in the corresponding paypalrestsdkold class
         """
         webhook_resource_type = self.resource_type
         klass = util.get_member(webhook_resource_type)

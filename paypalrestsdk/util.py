@@ -1,6 +1,6 @@
 import re
 from pydoc import locate
-import paypalrestsdk
+import paypalrestsdkold
 import inspect
 
 try:
@@ -57,15 +57,15 @@ def older_than_27():
 
 def get_member(name):
     """
-    Get the paypalrestsdk member class represented by name. Helper
+    Get the paypalrestsdkold member class represented by name. Helper
     method for fetching resource sent via webhook event
 
     Usage::
 
     >>> util.get_member('authorization')
-    <class 'paypalrestsdk.payments.Authorization'>
+    <class 'paypalrestsdkold.payments.Authorization'>
     """
     resource_class_dict = dict((k.lower(), ("{0}.{1}".format(v.__module__, k)))
-                               for k, v in inspect.getmembers(paypalrestsdk, inspect.isclass))
+                               for k, v in inspect.getmembers(paypalrestsdkold, inspect.isclass))
     klass = locate(resource_class_dict[name.lower()])
     return klass

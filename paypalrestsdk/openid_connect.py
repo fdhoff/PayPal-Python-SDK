@@ -1,8 +1,8 @@
-import paypalrestsdk.util as util
-from paypalrestsdk.resource import Resource
-from paypalrestsdk.api import default as default_api
-from paypalrestsdk.api import Api
-from paypalrestsdk.config import __version__
+import paypalrestsdkold.util as util
+from paypalrestsdkold.resource import Resource
+from paypalrestsdkold.api import default as default_api
+from paypalrestsdkold.api import Api
+from paypalrestsdkold.config import __version__
 from six import string_types
 
 class Base(Resource):

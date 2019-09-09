@@ -1,7 +1,7 @@
-from paypalrestsdk.resource import List, Find, Create, Post, Update, Replace, Resource
-from paypalrestsdk.api import default as default_api
-import paypalrestsdk.util as util
-from paypalrestsdk import exceptions
+from paypalrestsdkold.resource import List, Find, Create, Post, Update, Replace, Resource
+from paypalrestsdkold.api import default as default_api
+import paypalrestsdkold.util as util
+from paypalrestsdkold import exceptions
 
 
 class Payment(List, Find, Create, Post, Replace):

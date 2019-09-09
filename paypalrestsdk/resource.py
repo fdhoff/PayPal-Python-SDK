@@ -1,7 +1,7 @@
 import uuid
 
-import paypalrestsdk.util as util
-from paypalrestsdk.api import default as default_api
+import paypalrestsdkold.util as util
+from paypalrestsdkold.api import default as default_api
 
 
 class Resource(object):

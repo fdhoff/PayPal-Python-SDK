@@ -1,4 +1,4 @@
-from paypalrestsdk.resource import List, Find, Create, Delete, Update, Replace
+from paypalrestsdkold.resource import List, Find, Create, Delete, Update, Replace
 
 
 class WebProfile(Create, Find, List, Delete, Update, Replace):

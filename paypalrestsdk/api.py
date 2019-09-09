@@ -9,9 +9,9 @@ import os
 import platform
 import ssl
 
-import paypalrestsdk.util as util
-from paypalrestsdk import exceptions
-from paypalrestsdk.config import __version__, __endpoint_map__
+import paypalrestsdkold.util as util
+from paypalrestsdkold import exceptions
+from paypalrestsdkold.config import __version__, __endpoint_map__
 
 log = logging.getLogger(__name__)
 
@@ -31,8 +31,8 @@ class Api(object):
 
         Usage::
 
-            >>> import paypalrestsdk
-            >>> api = paypalrestsdk.Api(mode="sandbox", client_id='CLIENT_ID', client_secret='CLIENT_SECRET',
+            >>> import paypalrestsdkold
+            >>> api = paypalrestsdkold.Api(mode="sandbox", client_id='CLIENT_ID', client_secret='CLIENT_SECRET',
              ssl_options={"cert": "/path/to/server.pem"})
         """
         kwargs = util.merge_dict(options or {}, kwargs)
